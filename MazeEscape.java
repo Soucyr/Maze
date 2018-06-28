@@ -365,7 +365,7 @@
                 return canSee;
             }
             
-            void shuffle() {//Monster wanders when not nearby
+            void Wander() {//Monster wanders when not nearby
                 int dx = 0;
                 int dy = 0;
                 int randomDir = Math.random() > 0.5 ? 1 : -1;
@@ -412,7 +412,7 @@
                     }
                 }
                 else
-                    shuffle();
+                    Wander();
             }
             
             void move() {
@@ -421,7 +421,8 @@
                     chase();
                 }
                 else
-                    shuffle();
+                    Wander();
             }
         }
     }
+    
